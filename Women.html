@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Women.js"></script>
+    <link rel="stylesheet" href="Women.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style="position: sticky;top: 0px;z-index: 1;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">StyleStash</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-2">
+                    <li class="nav-item ps-3">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a style="color: white;" class="nav-link" href="Men.html">Men</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a style="color: white;"  class="nav-link" href="Women.html">Women</a>
+                    </li>
+                    <li class=" ps-3 mt-2">
+                        <p style="color: white;cursor: pointer;" onclick="showCart()" href="">Cart</p>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products" aria-label="Search">
+                    <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                    <button class="btn btn-primary ms-2 me-2"><a style="text-decoration: none;color: white;"
+                            href="Login.html">Login</a></button>
+                    <button class="btn btn-primary"><a style="text-decoration: none;color: white;"
+                            href="Signup.html">Signup</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="cartTab" id="cartTab">
+        <h1>Shopping Cart</h1>
+
+        <div class="listCart">
+            <div class="item">
+                <div class="image">
+                    <img src="./img/products/f1.jpg" alt="">
+                </div>
+                <div class="name"> T-Shirt Men</div>
+                <div class="totalPrice" id="price1">2499Rs</div>
+                <div class="quantity">
+                    <span class="minus" onclick="m1()">-</span>
+                    <span id="a1">1</span>
+                    <span class="plus" onclick="p1()">+</span>
+                </div>
+
+                <div class="image">
+                    <img src="./img/products/f2.jpg" alt="">
+                </div>
+                <div class="name"> T-Shirt Men</div>
+                <div class="totalPrice" id="price2">799Rs</div>
+                <div class="quantity">
+                    <span class="minus" onclick="m2()">-</span>
+                    <span id="a2">1</span>
+                    <span class="plus" onclick="p2()">+</span>
+                </div>
+
+                <div class="image">
+                    <img src="./img/products/f3.jpg" alt="">
+                </div>
+                <div class="name"> T-Shirt Men</div>
+                <div class="totalPrice" id="price3">1399Rs</div>
+                <div class="quantity">
+                    <span class="minus" onclick="m3()">-</span>
+                    <span id="a3">1</span>
+                    <span class="plus" onclick="p3()">+</span>
+                </div>
+            </div>
+            <div class="total mt-2 me-3">
+                <div class="totalc">
+                    <span>Total: </span><span id="total" >4697Rs</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="close" onclick="closeCart()">Close</button>
+            <button class="checkOut" onclick="window.location.href='../Payment/Payment.html'">CheckOut</button>
+        </div>
+
+    </div>
+
+    <div id="product1">
+        <h1>Mens Featured Product</h1>
+        <p>Summer Collection New Morden Design</p>
+        <div class="pro-container" >
+            <div class="pro" onclick="women1()">
+                <img src="./img/Women/w1.avif" alt="">
+                <div class="des">
+                    <span>Eyebogler</span>
+                    <h6>Cartoon Astronaut Shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>699</h5>
+                        <a href=""><i class='bx bx-cart-alt' onclick="addToCart()"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pro" onclick="women2()">
+                <img src="./img/Women/w2.jpg" alt="">
+                <div class="des">
+                    <span>Roadster</span>
+                    <h6>Checked Hooded Shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>799</h5>
+                        <a href=""><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pro" onclick="women3()">
+                <img src="./img/Women/w3.avif" alt="">
+                <div class="des">
+                    <span>Highlander</span>
+                    <h6>Men Cotton Casual Shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>999</h5>
+                        <a href=""><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pro" onclick="women4()">
+                <img src="./img/Women/w4.avif" alt="">
+                <div class="des">
+                    <span>Powerlook</span>
+                    <h6>Men Casual Shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                        
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>599</h5>
+                        <a href=""><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pro" onclick="women5()">
+                <img src="./img/Women/w5.avif" alt="">
+                <div class="des">
+                    <span>Moda Rapido</span>
+                    <h6>Slim fit casual Shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>1299</h5>
+                        <a href=""><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pro" onclick="women6()">
+                <img src="./img/Women/w6.webp" alt="">
+                <div class="des">
+                    <span>Roadster</span>
+                    <h6>Men Regular checked shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>799</h5>
+                        <a href=""><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pro" onclick="women7()">
+                <img src="./img/Women/w7.webp" alt="">
+                <div class="des">
+                    <span>Highlander</span>
+                    <h6>Regular fit casual Shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>899</h5>
+                        <a href=""><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pro" onclick="women8()">
+                <img src="./img/Women/w8.avif" alt="">
+                <div class="des">
+                    <span>Eyebogler</span>
+                    <h6>Men casual shirt</h6>
+                    <div class="star">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <div class="p-cart">
+                        <h5><i class='bx bx-rupee'></i>999</h5>
+                        <a href=""><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <footer>
+        <div class="col1">
+        <h3>StyleStash</h3>
+        <h5>Contact</h5> 
+        <p class="mb-0"><strong>Address:</strong> Lovely Professional University,Phagwara,Punjab</p> 
+        <p class="mb-0"><strong>Phone:</strong> Lovely Professional University,Phagwara,Punjab</p>
+        <p><strong>Availability:</strong> 10:00-18:00, Mon-Sat</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+        </div>
+        <div class="icon">
+            <i class='bx bxl-facebook-circle bx-sm'></i>
+            <i class='bx bxl-instagram-alt bx-sm'></i>
+            <i class='bx bxl-youtube bx-sm'></i>
+            <i class='bx bxl-twitter bx-sm'></i>
+        </div> 
+
+        </div>
+
+        <div class="col2">
+            <h5>About</h5>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col3">
+            <h5>My account</h5>
+            <a href="#">Sign in</a>
+            <a href="#">View cart</a>
+            <a href="#">My wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col4">
+            <h4>Install App</h4>
+            <p>From App Store and Google Play</p>
+            <div class="pay">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+    </footer>
+
+    <div class="copyright" style="text-align: center;">
+        <p>copyright <i class='bx bx-copyright'></i> 2024 Ecommerce project</p>
+    </div>
+</body>
+</html>

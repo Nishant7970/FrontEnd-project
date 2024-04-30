@@ -1,0 +1,373 @@
+
+body{
+    height: 100%;
+}
+
+#hero{
+    width: 100%;
+    background-image: url("/img/images3.jpg");
+    background-size: 100% 100%;
+    background-position: top 25% right 0;
+    background-repeat: no-repeat;
+    height: 90vh;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+#hero h4{
+    font-size: 25px;
+}
+#hero h2{
+    font-size: 50px;
+}
+#hero h1{
+    font-size: 60px;
+    color: lightseagreen;
+}
+#hero p{
+    color: grey;
+}
+#hero .btn{
+    width: 100px;
+}
+
+.cartTab{
+    width: 400px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 68px;
+    right: 0;
+    z-index: 1;
+    animation-name: demo;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+
+}
+.cartTab h1{
+    font-size: 30px;
+    padding: 20px;
+
+}
+.cartTab .btn .close{
+    width: 180px;
+    height: 40px;
+    background-color: whitesmoke;
+}
+.cartTab .btn .checkOut{
+    width: 180px;
+    height: 40px;
+    background-color: yellow;
+}
+.cartTab .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 27%;
+}
+.cartTab .listCart .item img{
+    width: 100%;
+    margin-left: 10px;
+}
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#feature{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:50px ;
+}
+#feature .fe-box{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 10px 10px 20px black;
+    border-radius: 50%;
+}
+#feature .fe-box h6{
+    /* background-color: aqua; */
+    padding: 9px 6px 9px 6px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+/* #feature .fe-box:nth-child(2) h6{
+    background-color: rgb(255, 127, 212);
+}
+#feature .fe-box:nth-child(3) h6{
+    background-color:beige;
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color: lightgreen;
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color: skyblue;
+}
+#feature .fe-box:nth-child(6) h6{
+    background-color: lightpink;
+} */
+
+
+
+#product1{
+    padding-top: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 70px;
+}
+#product1 h1{
+    font-size: 55px;
+    text-align: center;
+}
+#product1 p{
+    text-align: center;
+}
+#product1 .pro{
+    width: 250px;
+    padding: 10px 10px 0px 10px;
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(112, 109, 109);
+}
+#product1 .pro:hover{
+    box-shadow: 5px 5px 10px rgb(112, 109, 109);
+
+}
+#product1 img{
+    width: 100%;
+    border-radius: 10px;
+}
+#product1 h6{
+    font-size: 14px;
+}
+#product1 .star{
+    color: rgb(243, 181, 25);
+}
+.p-cart{
+    display: flex;
+    justify-content: space-between;
+}
+.p-cart a i{
+    font-size: 30px;
+}
+.p-cart a{
+    color: red;
+}
+.p-cart h5{
+    color: red;
+}
+ #product1 .pro-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    
+}
+
+#banner1{
+    overflow: hidden;
+}
+.banner1-child{
+    position: relative;
+    width: 500%;
+    animation: 10s slider infinite;
+}
+
+.banner1-child img{
+    height: 300px;
+    float: left;
+    width: 20%;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+   
+}
+
+
+#banner2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 80px; 
+}
+#banner2 .banner21{
+    width: 600px;
+    height: 40vh;
+    background-image: url(./img/banners/b17.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+#banner2 .banner22{
+    width: 600px;
+    height: 40vh;
+    background-image: url(https://img.freepik.com/premium-photo/smiling-mature-man-with-wrist-watch-yellow-background-fashion-man-face-portrait-banner-with-copy-space_545934-29851.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+#banner2 .banner21 button{
+    width: 20%;
+}
+#banner2 .banner22 button{
+    width: 18%;
+}
+
+#banner3{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 47px;
+
+}
+#banner3 .banner31{
+    width: 395px;
+    height: 30vh;
+    background-image: url(./img/banners/b7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    
+}
+#banner3 .banner32{
+    width: 395px;
+    height: 30vh;
+    background-image: url(./img/banners/b4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+#banner3 .banner33{
+    width: 395px;
+    height: 30vh;
+    background-image: url(./img/banners/b18.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    
+}
+footer{
+    padding-top: 10px;
+    margin-top: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+}
+
+.col1 .icon{
+    cursor: pointer;
+}
+
+.col2{
+    display: flex;
+    flex-direction: column;
+}
+.col2 a{
+    text-decoration: none;
+    color: black;
+}
+.col3 a{
+    text-decoration: none;
+    color: black;
+}
+.col3{
+    display: flex;
+    flex-direction: column;
+}
+.col4 .pay img{
+    border: 2px solid black;
+}
+.copyright{
+    background-color: black;
+    color: white;
+    margin-bottom: -16px;
+}
+.col2 a,.col3 a{
+    color: white;
+}
+@keyframes demo{
+    0%{right: -100px;}
+    100%{right: 0px;}
+}
+
+
